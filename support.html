@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4fe232",
+              "background-light": "#f6f8f6",
+              "background-dark": "#142111",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<title>Know My Tow - Support Requests</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-neutral-800 dark:text-neutral-200">
+<div class="flex h-screen">
+<!-- <aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-primary/20 dark:border-primary/30">
+<div class="p-6 flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold text-neutral-900 dark:text-white">Know My Tow</h1>
+</div>
+<nav class="mt-8">
+<a class="flex items-center gap-3 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">store</span>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">people</span>
+<span>Consumers</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 bg-primary/20 dark:bg-primary/30 text-primary font-bold" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+<span>Admin</span>
+</a>
+</nav>
+</aside> -->
+
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-10">
+<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+<line x1="12" x2="12" y1="22.08" y2="12"></line>
+</svg>
+
+    <img src="./assets/know_my_tow.png" class="p-2"/>
+
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span>Dashboard</span>
+</a>
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dealerslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./reports.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span onclick="window.location.href='./reports.html'">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+<span>Revenue</span>
+</a>
+</nav>
+</div>
+<div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./support.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<path d="M12 17h.01"></path>
+</svg>
+<span>Support</span>
+</a>
+
+</nav>
+</div>
+</aside>
+
+
+<div class="flex flex-col flex-1">
+<header class="flex items-center justify-end h-16 px-6 gap-4">
+<button class="relative rounded-full p-2 text-neutral-500 hover:bg-primary/10 dark:hover:bg-primary/20 dark:text-neutral-400"  onclick="window.location.href='./notifications.html'">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'></div>
+</header>
+<main class="flex-1 overflow-y-auto p-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-8">
+<h2 class="text-4xl font-bold text-neutral-900 dark:text-white">Support Requests</h2>
+<p class="text-neutral-500 dark:text-neutral-400 mt-2">Manage and track all dealer support requests and their ticket details.</p>
+</div>
+<div class="bg-white dark:bg-neutral-900 rounded-lg shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-neutral-500 dark:text-neutral-400">
+<thead class="text-xs text-neutral-700 dark:text-neutral-300 uppercase bg-neutral-50 dark:bg-neutral-800">
+<tr>
+<th class="px-6 py-3" scope="col">Ticket ID</th>
+<th class="px-6 py-3" scope="col">Dealer Name</th>
+<th class="px-6 py-3" scope="col">Issue Type</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3" scope="col">Created At</th>
+<th class="px-6 py-3" scope="col">Last Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"  onclick="window.location.href='./dealerprofilepage.html'">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12345</td>
+<td class="px-6 py-4">Acme Auto</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Technical Issue</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span> Open
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-15 10:00 AM</td>
+<td class="px-6 py-4">2024-01-16 02:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12346</td>
+<td class="px-6 py-4">Global Motors</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">Billing Inquiry</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+<span class="w-2 h-2 mr-1.5 bg-gray-500 rounded-full"></span> Closed
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-14 03:00 PM</td>
+<td class="px-6 py-4">2024-01-15 09:00 AM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12347</td>
+<td class="px-6 py-4">Precision Auto</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">Feature Request</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span> In Progress
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-13 11:00 AM</td>
+<td class="px-6 py-4">2024-01-14 05:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12348</td>
+<td class="px-6 py-4">Apex Auto</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Technical Issue</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span> Open
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-12 09:00 AM</td>
+<td class="px-6 py-4">2024-01-13 01:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12349</td>
+<td class="px-6 py-4">Summit Motors</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">Billing Inquiry</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+<span class="w-2 h-2 mr-1.5 bg-gray-500 rounded-full"></span> Closed
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-11 04:00 PM</td>
+<td class="px-6 py-4">2024-01-12 10:00 AM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12350</td>
+<td class="px-6 py-4">Elite Auto</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">Feature Request</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span> In Progress
+                        </span>
+</td>
+<td class="px-6 py-4">2024-01-10 12:00 PM</td>
+<td class="px-6 py-4">2024-01-11 06:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12351</td>
+<td class="px-6 py-4">Prime Auto</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Technical Issue</span></td>
+<td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"><span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span> Open</span></td>
+<td class="px-6 py-4">2024-01-09 10:00 AM</td>
+<td class="px-6 py-4">2024-01-10 02:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12352</td>
+<td class="px-6 py-4">United Motors</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">Billing Inquiry</span></td>
+<td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"><span class="w-2 h-2 mr-1.5 bg-gray-500 rounded-full"></span> Closed</span></td>
+<td class="px-6 py-4">2024-01-08 03:00 PM</td>
+<td class="px-6 py-4">2024-01-09 09:00 AM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12353</td>
+<td class="px-6 py-4">Superior Auto</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">Feature Request</span></td>
+<td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"><span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span> In Progress</span></td>
+<td class="px-6 py-4">2024-01-07 11:00 AM</td>
+<td class="px-6 py-4">2024-01-08 05:00 PM</td>
+</tr>
+<tr class="bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
+<td class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap">#12354</td>
+<td class="px-6 py-4">Pinnacle Auto</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Technical Issue</span></td>
+<td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"><span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span> Open</span></td>
+<td class="px-6 py-4">2024-01-06 09:00 AM</td>
+<td class="px-6 py-4">2024-01-07 01:00 PM</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

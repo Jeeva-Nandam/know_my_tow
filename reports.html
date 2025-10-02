@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Know My Tow - All Reports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4fe232",
+                        "accent-green": "#5DC04A",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142111",
+                        "text-light": "#142111",
+                        "text-dark": "#f6f8f6",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2a17",
+                        "border-light": "#e3e9e3",
+                        "border-dark": "#2a3e26",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .text-light {
+            color: #142111;
+        }
+        .dark .text-dark {
+            color: #f6f8f6;
+        }
+        .bg-surface-light {
+            background-color: #ffffff;
+        }
+        .dark .bg-surface-dark {
+            background-color: #1a2a17;
+        }
+        .border-border-light {
+            border-color: #e3e9e3;
+        }
+        .dark .border-border-dark {
+            border-color: #2a3e26;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen w-full">
+<!-- <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-10">
+<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+<line x1="12" x2="12" y1="22.08" y2="12"></line>
+</svg>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">Know My Tow</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/20 text-primary font-semibold" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span>Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="#">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+<span>Billing &amp; Revenue</span>
+</a>
+</nav>
+</div>
+<div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="#">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<path d="M12 17h.01"></path>
+</svg>
+<span>Support</span>
+</a>
+</nav>
+</div>
+</aside> -->
+
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-10">
+<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+<line x1="12" x2="12" y1="22.08" y2="12"></line>
+</svg>
+
+    <img src="./assets/know_my_tow.png" class="p-2"/>
+
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span>Dashboard</span>
+</a>
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dealerslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./reports.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span onclick="window.location.href='./reports.html'">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+<span>Revenue</span>
+</a>
+</nav>
+</div>
+<div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./support.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<path d="M12 17h.01"></path>
+</svg>
+<span>Support</span>
+</a>
+
+</nav>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-4xl font-bold text-text-light dark:text-text-dark">All Reports</h2>
+<!-- <div class="flex items-center gap-4">
+<div class="relative">
+<input class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-primary w-64" placeholder="Search reports..." type="text"/>
+<svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</div>
+
+</div> -->
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
+<th class="py-3 px-4 font-semibold">Report ID</th>
+<th class="py-3 px-4 font-semibold">User/Customer</th>
+<th class="py-3 px-4 font-semibold">Date Generated</th>
+<th class="py-3 px-4 font-semibold">Dealer</th>
+<th class="py-3 px-4 font-semibold text-center">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84621</td>
+<td class="py-3 px-4">John Doe</td>
+<td class="py-3 px-4">2023-10-27</td>
+<td class="py-3 px-4">Riverside RV</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline" onclick="window.location.href='https://app.knowmytow.com/purchase/summary/90d88544-f215-4818-b469-58a80fb44295'">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84620</td>
+<td class="py-3 px-4">Jane Smith</td>
+<td class="py-3 px-4">2023-10-26</td>
+<td class="py-3 px-4">Main St Motors</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84619</td>
+<td class="py-3 px-4">Michael Johnson</td>
+<td class="py-3 px-4">2023-10-25</td>
+<td class="py-3 px-4">Sunset Trailers</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84618</td>
+<td class="py-3 px-4">Emily Davis</td>
+<td class="py-3 px-4">2023-10-24</td>
+<td class="py-3 px-4">Grove Auto</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84617</td>
+<td class="py-3 px-4">Chris Wilson</td>
+<td class="py-3 px-4">2023-10-23</td>
+<td class="py-3 px-4">Crestview RV</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84616</td>
+<td class="py-3 px-4">Amanda Brown</td>
+<td class="py-3 px-4">2023-10-22</td>
+<td class="py-3 px-4">Riverside RV</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 px-4">#KMT-84615</td>
+<td class="py-3 px-4">David Garcia</td>
+<td class="py-3 px-4">2023-10-21</td>
+<td class="py-3 px-4">Main St Motors</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+<tr>
+<td class="py-3 px-4">#KMT-84614</td>
+<td class="py-3 px-4">Sarah Martinez</td>
+<td class="py-3 px-4">2023-10-20</td>
+<td class="py-3 px-4">Sunset Trailers</td>
+<td class="py-3 px-4 text-center">
+<button class="text-primary hover:underline">View</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center mt-6">
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">Showing 1 to 8 of 800 reports</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Previous</button>
+<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Next</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Know My Tow - Billing &amp; Revenue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4fe232",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142111",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen">
+<!-- <aside class="w-64 bg-background-light dark:bg-background-dark/50 border-r border-background-dark/10 dark:border-background-light/10 flex flex-col">
+<div class="flex items-center gap-3 p-6 border-b border-background-dark/10 dark:border-background-light/10">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full text-white">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h1 class="text-xl font-bold text-background-dark dark:text-background-light">Know My Tow</h1>
+</div>
+<nav class="flex-grow px-4 py-6">
+<ul class="space-y-2">
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-background-dark/70 dark:text-background-light/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-background-dark/70 dark:text-background-light/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">group</span>Dealers</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-background-dark/70 dark:text-background-light/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">leaderboard</span>Leads</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-background-dark/70 dark:text-background-light/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">assessment</span>Reports</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition-colors" href="#"><span class="material-symbols-outlined">receipt_long</span>Billing &amp; Revenue</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-background-dark/70 dark:text-background-light/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span>Support</a></li>
+</ul>
+</nav>
+</aside> -->
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-10">
+<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+<line x1="12" x2="12" y1="22.08" y2="12"></line>
+</svg>
+
+    <img src="./assets/know_my_tow.png" class="p-2"/>
+
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span>Dashboard</span>
+</a>
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dealerslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./reports.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span onclick="window.location.href='./reports.html'">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+<span>Revenue</span>
+</a>
+</nav>
+</div>
+<div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./support.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<path d="M12 17h.01"></path>
+</svg>
+<span>Support</span>
+</a>
+
+</nav>
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="flex items-center justify-end h-20 px-6 container mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVoA6d4Ui6DUE71vZf5Csl-9snEvcvAR4t6edRhy9ZKh9bC97GqGDUvS8_ez6vy29VTn9UnX2qp6rnwrN_gxiTAAnaB4pzMZ7FsGm9JxFclwb8-MfKColzFg7G36FN31-vQEiOlMEcIkPfLrXUfKKNao3oOgGOYVl4e7YUXih6GqrIpgMoOMXfrsQefUWs-OalZt7o52NIaXbGlSKTXbngGyKF1cLknhl0kKVcSQEzasT63n94mZzl1kTf_FRBBgCfTNAyWgDZuX0");'></div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-8">
+<h2 class="text-4xl font-bold text-background-dark dark:text-background-light">Billing &amp; Revenue</h2>
+<p class="text-base text-background-dark/60 dark:text-background-light/60 mt-1">View your billing and revenue analytics</p>
+</div>
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-4">Revenue Overview</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+<p class="text-base font-medium text-background-dark/80 dark:text-background-light/80">Monthly Revenue</p>
+<p class="text-3xl font-bold text-background-dark dark:text-background-light mt-2">$12,500</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400 mt-1">+10%</p>
+</div>
+<div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+<p class="text-base font-medium text-background-dark/80 dark:text-background-light/80">Total Revenue</p>
+<p class="text-3xl font-bold text-background-dark dark:text-background-light mt-2">$150,000</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400 mt-1">+5%</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark/50 border border-background-dark/10 dark:border-background-light/10 rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-lg font-medium text-background-dark dark:text-background-light">Monthly Revenue</p>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">This Month</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold text-background-dark dark:text-background-light">$12,500</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+10%</p>
+</div>
+</div>
+<div class="h-64 flex items-end gap-4 px-2">
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 90%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Jan</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 80%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Feb</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 70%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Mar</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary rounded" style="height: 80%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Apr</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 80%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">May</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 70%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Jun</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 50%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">Jul</p>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 border border-background-dark/10 dark:border-background-light/10 rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-lg font-medium text-background-dark dark:text-background-light">Total Revenue</p>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">All Time</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold text-background-dark dark:text-background-light">$150,000</p>
+<p class="text-base font-medium text-green-600 dark:text-green-400">+5%</p>
+</div>
+</div>
+<div class="h-64 flex items-end gap-4 px-2">
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 30%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2018</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 80%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2019</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 90%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2020</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 20%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2021</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 60%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2022</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded" style="height: 70%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2023</p>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-full bg-primary rounded" style="height: 10%;"></div>
+<p class="text-xs font-bold text-background-dark/60 dark:text-background-light/60">2024</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

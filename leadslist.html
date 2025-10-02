@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Know My Tow - Leads</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4fe232",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142111",
+                        "text-light": "#121711",
+                        "text-dark": "#e8f5e9",
+                        "subtle-light": "#dde5dc",
+                        "subtle-dark": "#2a3c2a",
+                        "muted-light": "#6a8764",
+                        "muted-dark": "#a5d6a7"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<!-- <aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-subtle-light dark:border-subtle-dark">
+<div class="flex items-center gap-4 h-16 px-6 border-b border-subtle-light dark:border-subtle-dark">
+<div class="text-primary size-7">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold">Know My Tow</h1>
+</div>
+<nav class="p-4">
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">group</span> Dealers</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 text-primary font-bold" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Leads</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">assessment</span> Reports</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span> Billing &amp; Revenue</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">support_agent</span> Support</a></li>
+</ul>
+</nav>
+</aside> -->
+
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-10">
+<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+<line x1="12" x2="12" y1="22.08" y2="12"></line>
+</svg>
+
+    <img src="./assets/know_my_tow.png" class="p-2"/>
+
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span>Dashboard</span>
+</a>
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dealerslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Dealers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./reports.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span onclick="window.location.href='./reports.html'">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+<span>Revenue</span>
+</a>
+</nav>
+</div>
+<div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./support.html">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<path d="M12 17h.01"></path>
+</svg>
+<span>Support</span>
+</a>
+
+</nav>
+</div>
+</aside>
+
+
+<div class="flex-1 flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-subtle-light dark:border-subtle-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-end h-16">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors"  onclick="window.location.href='./notifications.html'">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Leads</h2>
+<button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+                    New Lead
+                </button>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-lg overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead class="bg-subtle-light/30 dark:bg-subtle-dark/30">
+<tr>
+<th class="px-6 py-4 text-left text-xs font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider" scope="col">Customer Name</th>
+<th class="px-6 py-4 text-left text-xs font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider" scope="col">Dealer</th>
+<th class="px-6 py-4 text-left text-xs font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider" scope="col">Date</th>
+<th class="px-6 py-4 text-left text-xs font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider" scope="col">Status</th>
+<th class="px-6 py-4 text-left text-xs font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider" scope="col">Vehicle</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-subtle-light dark:divide-subtle-dark">
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group" onclick="window.location.href='./dashboard.html'">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">John Doe</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer A</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-27</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">New</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023 Ford F-150</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Jane Smith</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer B</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-26</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Contacted</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2022 RAM 1500</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Mike Johnson</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer A</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-25</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Qualified</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023 Chevrolet Silverado</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Emily Williams</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer C</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-24</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Lost</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2021 Toyota Tundra</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Chris Brown</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer B</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-23</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">New</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2022 GMC Sierra</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Jessica Davis</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer D</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-22</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Contacted</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023 Nissan Titan</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">David Miller</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer E</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-21</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">New</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2021 Ford Ranger</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Sarah Wilson</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer F</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-20</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">Converted</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2022 Toyota Tacoma</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Daniel Moore</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer G</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-19</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Qualified</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023 Jeep Gladiator</td>
+</tr>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Laura Taylor</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">Dealer H</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2023-10-18</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Lost</span></td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">2022 Honda Ridgeline</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
