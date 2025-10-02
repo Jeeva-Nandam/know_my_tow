@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Know My Tow - Dealer Details</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4fe232",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142111",
+                        "text-light": "#121711",
+                        "text-dark": "#e8f5e9",
+                        "subtle-light": "#dde5dc",
+                        "subtle-dark": "#2a3c2a",
+                        "muted-light": "#6a8764",
+                        "muted-dark": "#a5d6a7"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<!-- <aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-subtle-light dark:border-subtle-dark">
+<div class="flex items-center gap-4 h-16 px-6 border-b border-subtle-light dark:border-subtle-dark">
+<div class="text-primary size-7">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold">Know My Tow</h1>
+</div>
+<nav class="p-4">
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 text-primary font-bold" href="#">
+<span class="material-symbols-outlined">group</span> Dealers</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Leads</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">assessment</span> Reports</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span> Billing &amp; Revenue</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
+<span class="material-symbols-outlined">support_agent</span> Support</a></li>
+</ul>
+</nav>
+</aside> -->
+<div class="flex-1 flex flex-col">
+<!-- <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-subtle-light dark:border-subtle-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+<a class="hover:text-primary transition-colors" href="#">Dealers</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-text-light dark:text-text-dark font-medium">Franklin Caravan Group</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'></div>
+</div>
+</div>
+</div>
+</header> -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-subtle-light dark:border-subtle-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div>
+<a class="flex items-center gap-2 text-muted-light dark:text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors" href="./dealerslist.html">
+<span class="material-symbols-outlined">arrow_back</span>
+                                Back to Dealers
+                            </a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+<div>
+<h2 class="text-3xl font-bold tracking-tight">Franklin Caravan Group</h2>
+<p class="text-muted-light dark:text-muted-dark mt-1">123 Auto Lane, Carville, ST 54321</p>
+<div class="mt-4 flex items-center gap-4">
+<span class="inline-flex items-center gap-2 text-sm bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-3 py-1 rounded-full font-medium">
+<span class="size-2 bg-green-500 rounded-full"></span>
+                            Active
+                        </span>
+<span class="text-sm text-muted-light dark:text-muted-dark">Member since: Jan 15, 2022</span>
+</div>
+</div>
+<div class="mt-4 sm:mt-0 flex-shrink-0">
+<button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity"  onclick="window.location.href='./dealerprofilepage.html'">
+<span class="material-symbols-outlined">edit</span>
+                        Edit Dealer
+                    </button>
+</div>
+</div>
+<div class="mt-6 border-t border-subtle-light dark:border-subtle-dark pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Leads</p>
+<p class="text-2xl font-bold mt-1">120</p>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Caravans</p>
+<p class="text-2xl font-bold mt-1">50</p>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Reports</p>
+<p class="text-2xl font-bold mt-1">20</p>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Billing</p>
+<p class="text-2xl font-bold text-green-500 mt-1">Paid</p>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl">
+<div class="p-6">
+<h3 class="text-xl font-bold">Recent Leads</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-sm">
+<thead class="bg-subtle-light/30 dark:bg-subtle-dark/30">
+<tr>
+<th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Customer Name</th>
+<th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Date</th>
+<th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Status</th>
+<th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-subtle-light dark:divide-subtle-dark">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">John Doe</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-15</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium">New</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-14</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200 px-2 py-1 rounded-full text-xs font-medium">Contacted</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Sam Wilson</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-12</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 px-2 py-1 rounded-full text-xs font-medium">Closed</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
+<a class="text-primary font-semibold hover:underline" href="#">View All Leads</a>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl">
+<div class="p-6">
+<h3 class="text-xl font-bold">Generated Reports</h3>
+</div>
+<ul class="divide-y divide-subtle-light dark:divide-subtle-dark">
+<li class="px-6 py-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Monthly Sales Report - Feb 2024</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-03-01</p>
+</div>
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</li>
+<li class="px-6 py-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Quarterly Lead Analysis - Q4 2023</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-01-05</p>
+</div>
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</li>
+<li class="px-6 py-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Yearly Performance Review - 2023</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-01-10</p>
+</div>
+<button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</li>
+</ul>
+<div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
+<a class="text-primary font-semibold hover:underline" href="#">View All Reports</a>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+<h3 class="text-xl font-bold mb-4">Contact Information</h3>
+<div class="space-y-4 text-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">person</span>
+<div>
+<p class="font-medium">John Smith</p>
+<p class="text-muted-light dark:text-muted-dark">Primary Contact</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">mail</span>
+<div>
+<p class="font-medium">john.smith@prestigeauto.com</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">phone</span>
+<div>
+<p class="font-medium">(555) 123-4567</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+<h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">person_add</span>
+</div>
+<div>
+<p class="text-sm">New lead <span class="font-semibold text-text-light dark:text-text-dark">Michael Brown</span> was assigned.</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">2 hours ago</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">rv_hookup</span>
+</div>
+<div>
+<p class="text-sm">Added a new caravan: <span class="font-semibold text-text-light dark:text-text-dark">Jayco Eagle 2024</span>.</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">1 day ago</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">assessment</span>
+</div>
+<div>
+<p class="text-sm">Generated monthly sales report.</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">3 days ago</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">payments</span>
+</div>
+<div>
+<p class="text-sm">Subscription payment was successful.</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">Mar 1, 2024</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

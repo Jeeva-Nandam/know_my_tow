@@ -40,33 +40,6 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex min-h-screen">
-<!-- <aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-subtle-light dark:border-subtle-dark">
-<div class="flex items-center gap-4 h-16 px-6 border-b border-subtle-light dark:border-subtle-dark">
-<div class="text-primary size-7">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-</svg>
-</div>
-<h1 class="text-xl font-bold">Know My Tow</h1>
-</div>
-<nav class="p-4">
-<ul class="space-y-1">
-    <li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
-<span class="material-symbols-outlined">home</span> Dashboard</a></li>
-<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 text-primary font-bold" href="#">
-<span class="material-symbols-outlined">group</span> Dealers</a></li>
-<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
-<span class="material-symbols-outlined">leaderboard</span> Leads</a></li>
-<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
-<span class="material-symbols-outlined">assessment</span> Reports</a></li>
-<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
-<span class="material-symbols-outlined">payments</span> Billing &amp; Revenue</a></li>
-<li><a class="flex items-center gap-3 px-4 py-2 rounded-lg text-muted-light dark:text-muted-dark hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors" href="#">
-<span class="material-symbols-outlined">support_agent</span> Support</a></li>
-</ul>
-</nav>
-</aside> -->
-
 <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
 <div>
 <div class="flex items-center gap-3 mb-10">
@@ -135,8 +108,6 @@
 </nav>
 </div>
 </aside>
-
-
 <div class="flex-1 flex flex-col">
 <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-subtle-light dark:border-subtle-dark">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,8 +124,8 @@
 <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
 <div class="flex items-center justify-between mb-8">
 <h2 class="text-3xl font-bold tracking-tight">Dealers</h2>
-<button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined">add</span>
+<button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity" onclick="window.location.href='./addnewdealer.html'">
+<span class="material-symbols-outlined"  >add</span>
                     New Dealer
                 </button>
 </div>
@@ -170,62 +141,62 @@
 </tr>
 </thead>
 <tbody class="divide-y divide-subtle-light dark:divide-subtle-dark">
-<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group" onclick="window.location.href='./addnewdealer.html'">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer A</td>
+<tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group" onclick="window.location.href='./eachdealer.html'">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Franklin Caravan</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">120</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">50</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">20</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer B</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Sunset Motors</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">150</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">75</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">30</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer C</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Pioneer Auto Sales</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">90</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">40</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">15</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer D</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Landmark Automotive</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">110</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">60</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">25</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer E</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Heritage Motors</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">130</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">80</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">35</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer F</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Crestline Auto</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">100</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">55</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">22</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer G</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Summit Automotive</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">140</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">70</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">28</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer H</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Green Valley Motors</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">160</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">85</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">40</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer I</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Blue Ribbon Cars</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">180</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">90</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">45</td>
 </tr>
 <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Dealer J</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-light dark:text-text-dark group-hover:text-primary transition-colors">Redline Auto Sales</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">200</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">100</td>
 <td class="px-6 py-4 whitespace-nowrap text-sm text-muted-light dark:text-muted-dark">50</td>
