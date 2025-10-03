@@ -137,7 +137,7 @@
 </aside>
 
 
-<div class="flex flex-col flex-1">
+<!-- <div class="flex flex-col flex-1">
 <header class="flex items-center justify-end h-16 px-6 gap-4">
 <button class="relative rounded-full p-2 text-neutral-500 hover:bg-primary/10 dark:hover:bg-primary/20 dark:text-neutral-400"  onclick="window.location.href='./notifications.html'">
 <span class="material-symbols-outlined">notifications</span>
@@ -286,7 +286,187 @@
 </div>
 </div>
 </main>
+</div> -->
+
+
+<div class="flex flex-col flex-1">
+  <header class="flex items-center justify-end h-16 px-6 gap-4">
+    <button
+      class="relative rounded-full p-2 text-neutral-500 hover:bg-primary/10 dark:hover:bg-primary/20 dark:text-neutral-400"
+      onclick="window.location.href='./notifications.html'"
+    >
+      <span class="material-symbols-outlined">notifications</span>
+    </button>
+    <div
+      class="size-10 rounded-full bg-cover bg-center"
+      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'
+    ></div>
+  </header>
+
+  <main class="flex-1 overflow-y-auto p-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold text-neutral-900 dark:text-white">
+          Support Requests
+        </h2>
+        <p class="text-neutral-500 dark:text-neutral-400 mt-2">
+          Manage and track all dealer support requests and their ticket details.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-neutral-900 rounded-lg shadow-sm">
+        <div class="overflow-x-auto">
+          <table
+            class="w-full text-sm text-left text-neutral-500 dark:text-neutral-400"
+          >
+            <thead
+              class="text-xs text-neutral-700 dark:text-neutral-300 uppercase bg-neutral-50 dark:bg-neutral-800"
+            >
+              <tr>
+                <th class="px-6 py-3" scope="col">Ticket ID</th>
+                <th class="px-6 py-3" scope="col">Dealer Name</th>
+                <th class="px-6 py-3" scope="col">Issue Type</th>
+                <th class="px-6 py-3" scope="col">Created At</th>
+                <th class="px-6 py-3" scope="col">Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12345
+                </td>
+                <td class="px-6 py-4">Acme Auto</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+                    >Technical Issue</span
+                  >
+                </td>
+                <td class="px-6 py-4">15-01-2025</td>
+                <td class="px-6 py-4">16-01-2025</td>
+              </tr>
+
+              <tr
+                class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12346
+                </td>
+                <td class="px-6 py-4">Global Motors</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
+                    >Billing Inquiry</span
+                  >
+                </td>
+                <td class="px-6 py-4">14-01-2025</td>
+                <td class="px-6 py-4">15-01-2025</td>
+              </tr>
+
+              <tr
+                class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12347
+                </td>
+                <td class="px-6 py-4">Precision Auto</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+                    >Feature Request</span
+                  >
+                </td>
+                <td class="px-6 py-4">13-01-2025</td>
+                <td class="px-6 py-4">14-01-2025</td>
+              </tr>
+
+              <tr
+                class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12348
+                </td>
+                <td class="px-6 py-4">Apex Auto</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+                    >Technical Issue</span
+                  >
+                </td>
+                <td class="px-6 py-4">12-01-2025</td>
+                <td class="px-6 py-4">13-01-2025</td>
+              </tr>
+
+              <tr
+                class="bg-white dark:bg-neutral-900 border-b dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12349
+                </td>
+                <td class="px-6 py-4">Summit Motors</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
+                    >Billing Inquiry</span
+                  >
+                </td>
+                <td class="px-6 py-4">11-01-2025</td>
+                <td class="px-6 py-4">12-01-2025</td>
+              </tr>
+
+              <tr
+                class="bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+              >
+                <td
+                  class="px-6 py-4 font-medium text-neutral-900 dark:text-white whitespace-nowrap"
+                >
+                  #12350
+                </td>
+                <td class="px-6 py-4">Elite Auto</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+                    >Feature Request</span
+                  >
+                </td>
+                <td class="px-6 py-4">10-01-2025</td>
+                <td class="px-6 py-4">11-01-2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex justify-between items-center mt-4 p-6">
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">Showing 1 to 8 of 800 reports</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Previous</button>
+<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Next</button>
 </div>
+</div>
+      </div>
+
+        
+
+
+    </div>
+  </main>
+
+</div>
+
+
+
+
 </div>
 
 </body></html>

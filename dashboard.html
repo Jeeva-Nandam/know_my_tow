@@ -6,8 +6,15 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+    .text-light { color: #142111; }
+    .dark .text-dark { color: #f6f8f6; }
+    .bg-surface-light { background-color: #ffffff; }
+    .dark .bg-surface-dark { background-color: #1a2a17; }
+    .border-border-light { border-color: #e3e9e3; }
+    .dark .border-border-dark { border-color: #2a3e26; }
+</style>
 <script>
     tailwind.config = {
       darkMode: "class",
@@ -37,27 +44,7 @@
         },
       },
     }
-  </script>
-<style>
-    .text-light {
-      color: #142111;
-    }
-    .dark .text-dark {
-      color: #f6f8f6;
-    }
-    .bg-surface-light {
-      background-color: #ffffff;
-    }
-    .dark .bg-surface-dark {
-      background-color: #1a2a17;
-    }
-    .border-border-light {
-      border-color: #e3e9e3;
-    }
-    .dark .border-border-dark {
-      border-color: #2a3e26;
-    }
-  </style>
+</script>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex min-h-screen w-full">
@@ -69,9 +56,7 @@
 <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
 <line x1="12" x2="12" y1="22.08" y2="12"></line>
 </svg>
-
-    <img src="./assets/know_my_tow.png" class="p-2"/>
-
+<img src="./assets/know_my_tow.png" class="p-2"/>
 </div>
 <nav class="flex flex-col gap-2">
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
@@ -81,7 +66,6 @@
 </svg>
 <span>Dashboard</span>
 </a>
-
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dealerslist.html">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -91,6 +75,19 @@
 </svg>
 <span>Dealers</span>
 </a>
+
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./caravan.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.28 13.06a4.47 4.47 0 0 0-2.8-3.9A4.47 4.47 0 0 0 12.6 4H9.5a4.5 4.5 0 0 0 0 9h3.1a4.47 4.47 0 0 1 4.47 4.47.5.5 0 0 1-.5.5H8"></path>
+<path d="M6 18h-.5a4.5 4.5 0 0 1 0-9H8"></path>
+<path d="M11 6V5a4 4 0 0 1 4-4h2"></path>
+<path d="M18 19v1a4 4 0 0 1-4 4h-2"></path>
+</svg>
+<span>Caravans</span>
+</a>
+
+
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -133,11 +130,9 @@
   </svg>
   <span>Logout</span>
 </a>
-
 </nav>
 </div>
 </aside>
-
 <main class="flex-1 p-8">
 <div class="flex justify-between items-center mb-8">
 <h2 class="text-4xl font-bold text-text-light dark:text-text-dark">Dashboard</h2>
@@ -164,8 +159,10 @@
 <p class="text-4xl font-bold text-white">800</p>
 </div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div class="lg:col-span-2">
+<!-- FULL-WIDTH Recent Dealer Activity TABLE -->
+<div class="w-full">
+
+
 <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark">
 <h3 class="text-xl font-bold mb-4">Recent Dealer Activity</h3>
 <div class="overflow-x-auto">
@@ -174,124 +171,49 @@
 <tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
 <th class="py-3 px-4 font-semibold">Dealer</th>
 <th class="py-3 px-4 font-semibold">Activity</th>
+<th class="py-3 px-4 font-semibold">Caravans</th>
 <th class="py-3 px-4 font-semibold">Date</th>
-<th class="py-3 px-4 font-semibold">Status</th>
 </tr>
 </thead>
 <tbody>
 <tr class="border-b border-border-light dark:border-border-dark">
 <td class="py-3 px-4">Riverside RV</td>
 <td class="py-3 px-4">Added new vehicle</td>
-<td class="py-3 px-4">2023-10-27</td>
-<td class="py-3 px-4"><span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Completed</span></td>
+<td class="py-3 px-4">Jayco Eagle</td>
+<td class="py-3 px-4">27-10-2023</td>
 </tr>
 <tr class="border-b border-border-light dark:border-border-dark">
 <td class="py-3 px-4">Main St Motors</td>
 <td class="py-3 px-4">Updated profile</td>
-<td class="py-3 px-4">2023-10-26</td>
-<td class="py-3 px-4"><span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Completed</span></td>
+<td class="py-3 px-4">-</td>
+<td class="py-3 px-4">26-10-2023</td>
 </tr>
-<tr>
+<tr class="border-b border-border-light dark:border-border-dark">
 <td class="py-3 px-4">Sunset Trailers</td>
 <td class="py-3 px-4">New lead received</td>
-<td class="py-3 px-4">2023-10-25</td>
-<td class="py-3 px-4"><span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm font-medium">Pending</span></td>
+<td class="py-3 px-4">Airstream Classic</td>
+<td class="py-3 px-4">25-10-2023</td>
 </tr>
 <tr class="border-b border-border-light dark:border-border-dark">
 <td class="py-3 px-4">Grove Auto</td>
 <td class="py-3 px-4">Generated report</td>
-<td class="py-3 px-4">2023-10-24</td>
-<td class="py-3 px-4"><span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Completed</span></td>
+<td class="py-3 px-4">-</td>
+<td class="py-3 px-4">24-10-2023</td>
 </tr>
 <tr>
 <td class="py-3 px-4">Crestview RV</td>
 <td class="py-3 px-4">New account created</td>
-<td class="py-3 px-4">2023-10-23</td>
-<td class="py-3 px-4"><span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Completed</span></td>
+<td class="py-3 px-4">-</td>
+<td class="py-3 px-4">23-10-2023</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</div>
-<div class="flex flex-col gap-8">
-<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark">
-<h3 class="text-xl font-bold mb-4">Lead Conversion</h3>
-<div class="h-48">
-<canvas id="leadChart"></canvas>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark">
-<h3 class="text-xl font-bold mb-4">Announcements</h3>
-<div class="space-y-4">
-<div>
-<p class="font-semibold">System Maintenance</p>
-<p class="text-sm text-text-light/60 dark:text-text-dark/60">Scheduled for Oct 30, 2AM-4AM EST.</p>
-</div>
-<div>
-<p class="font-semibold">New Feature: Bulk Upload</p>
-<p class="text-sm text-text-light/60 dark:text-text-dark/60">You can now upload multiple vehicles at once.</p>
-</div>
-</div>
-</div>
-</div>
+
+
 </div>
 </main>
-<div class="fixed bottom-8 right-8">
-<button class="bg-primary text-background-dark dark:text-background-light font-bold rounded-full h-16 w-16 flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors">
-<svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-</svg>
-</button>
-</div>
-</div>
-<script>
-    const ctx = document.getElementById('leadChart');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Converted', 'Pending', 'Lost'],
-        datasets: [{
-          label: 'Leads',
-          data: [180, 120, 50],
-          backgroundColor: [
-            '#4fe232',
-            '#facc15',
-            '#ef4444'
-          ],
-          borderColor: [
-            '#ffffff',
-            '#ffffff',
-            '#ffffff'
-          ],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: document.documentElement.classList.contains('dark') ? '#f6f8f6' : '#142111',
-            }
-          }
-        }
-      }
-    });
-    // Update chart colors on theme change
-    const observer = new MutationObserver((mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-          Chart.getChart('leadChart').options.plugins.legend.labels.color = document.documentElement.classList.contains('dark') ? '#f6f8f6' : '#142111';
-          Chart.getChart('leadChart').update();
-        }
-      }
-    });
-    observer.observe(document.documentElement, {
-      attributes: true
-    });
-  </script>
 
+</div>
 </body></html>
