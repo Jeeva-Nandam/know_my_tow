@@ -163,11 +163,14 @@
       const password = document.getElementById("password").value.trim();
       const errorMsg = document.getElementById("errorMsg");
 
-      if (email === "ramesh@gmail.com" && password === "12345678") {
-        window.location.href = "./dashboard.html";
-      } else {
-        errorMsg.textContent = "Invalid email or password!";
-      }
+      if (
+  (email === "ramesh@colakin.com" && password === "12345678") ||
+  (email === "dealer@knowmytow.com" && password === "12345678")
+) {
+  window.location.href = "./dashboard.html";
+} else {
+  errorMsg.textContent = "Invalid email or password!";
+}
     });
   </script>
 

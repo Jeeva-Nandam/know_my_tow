@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Know My Tow - Caravan List</title>
@@ -8,58 +9,48 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#4fe232",
-                        "accent-green": "#5DC04A",
-                        "background-light": "#f6f8f6",
-                        "background-dark": "#142111",
-                        "text-light": "#142111",
-                        "text-dark": "#f6f8f6",
-                        "surface-light": "#ffffff",
-                        "surface-dark": "#1a2a17",
-                        "border-light": "#e3e9e3",
-                        "border-dark": "#2a3e26",
-                    },
-                    fontFamily: {
-                        "display": ["Inter"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#4fe232",
+                    "accent-green": "#5DC04A",
+                    "background-light": "#f6f8f6",
+                    "background-dark": "#142111",
+                    "text-light": "#142111",
+                    "text-dark": "#f6f8f6",
+                    "surface-light": "#ffffff",
+                    "surface-dark": "#1a2a17",
+                    "border-light": "#e3e9e3",
+                    "border-dark": "#2a3e26",
+                },
+                fontFamily: {
+                    "display": ["Inter"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
                 },
             },
-        }
-    </script>
+        },
+    }
+</script>
 <style>
-        .text-light {
-            color: #142111;
-        }
-        .dark .text-dark {
-            color: #f6f8f6;
-        }
-        .bg-surface-light {
-            background-color: #ffffff;
-        }
-        .dark .bg-surface-dark {
-            background-color: #1a2a17;
-        }
-        .border-border-light {
-            border-color: #e3e9e3;
-        }
-        .dark .border-border-dark {
-            border-color: #2a3e26;
-        }
-    </style>
+    .text-light { color: #142111; }
+    .dark .text-dark { color: #f6f8f6; }
+    .bg-surface-light { background-color: #ffffff; }
+    .dark .bg-surface-dark { background-color: #1a2a17; }
+    .border-border-light { border-color: #e3e9e3; }
+    .dark .border-border-dark { border-color: #2a3e26; }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex min-h-screen w-full">
+
+<!-- Sidebar -->
 <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
 <div>
 <div class="flex items-center gap-3 mb-10">
@@ -116,7 +107,7 @@
 </svg>
 <span onclick="window.location.href='./reports.html'">Reports</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
 <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
 </svg>
@@ -145,206 +136,224 @@
 </nav>
 </div>
 </aside>
-<main class="flex-1 p-8 bg-background-light dark:bg-background-dark">
-<div class="flex justify-between items-center mb-8">
-<h2 class="text-4xl font-bold text-text-light dark:text-text-dark">Caravans List</h2>
+
+<!-- Main Content -->
+<!-- <main class="flex-1 p-8 bg-background-light dark:bg-background-dark">
+  <div class="flex justify-between items-center mb-8">
+    <h2 class="text-4xl font-bold">Caravans List</h2>
+    <div class="flex items-center gap-4">
+      <button class="bg-primary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:bg-primary/90" onclick="window.location.href='./addcaravan.html'">
+        <span>Add Caravan</span>
+      </button>
+    </div>
+  </div>
+
+ 
+  <div class="overflow-x-auto">
+    <table class="w-full text-left border-collapse border border-transparent">
+      <thead>
+        <tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
+          <th class="py-3 px-4 font-semibold border">VIN</th>
+          <th class="py-3 px-4 font-semibold border">Make</th>
+          <th class="py-3 px-4 font-semibold border">Model</th>
+          <th class="py-3 px-4 font-semibold border">Associated Dealer</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">1G9NF1234567890AB</td>
+          <td class="py-3 px-4 border">Jayco</td>
+          <td class="py-3 px-4 border">Eagle HT 284BHOK</td>
+          <td class="py-3 px-4 border">Franklin Caravan</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">2G8MF2345678901BC</td>
+          <td class="py-3 px-4 border">Forest River</td>
+          <td class="py-3 px-4 border">Cherokee Grey Wolf</td>
+          <td class="py-3 px-4 border">Riverside RV</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">3H7NG3456789012CD</td>
+          <td class="py-3 px-4 border">Grand Design</td>
+          <td class="py-3 px-4 border">Reflection 312BHTS</td>
+          <td class="py-3 px-4 border">Sunset Trailers</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">4J6OH4567890123DE</td>
+          <td class="py-3 px-4 border">Keystone</td>
+          <td class="py-3 px-4 border">Passport 221BH</td>
+          <td class="py-3 px-4 border">Grove Auto</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">5K5PI5678901234EF</td>
+          <td class="py-3 px-4 border">Coachmen</td>
+          <td class="py-3 px-4 border">Apex Nano 194BHS</td>
+          <td class="py-3 px-4 border">Crestview RV</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">6L7QJ6789012345FG</td>
+          <td class="py-3 px-4 border">Winnebago</td>
+          <td class="py-3 px-4 border">Micro Minnie 2108DS</td>
+          <td class="py-3 px-4 border">Adventure RV</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">7M8RK7890123456GH</td>
+          <td class="py-3 px-4 border">Airstream</td>
+          <td class="py-3 px-4 border">Flying Cloud 25FB</td>
+          <td class="py-3 px-4 border">Luxury Trailers</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">8N9SL8901234567HI</td>
+          <td class="py-3 px-4 border">Thor</td>
+          <td class="py-3 px-4 border">Quantum WS31</td>
+          <td class="py-3 px-4 border">Freedom RV</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">9P0TM9012345678IJ</td>
+          <td class="py-3 px-4 border">Dutchmen</td>
+          <td class="py-3 px-4 border">Kodiak Ultra-Lite</td>
+          <td class="py-3 px-4 border">Highland RV</td>
+        </tr>
+        <tr class="hover:bg-primary/10 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">
+          <td class="py-3 px-4 border font-medium">0Q1UN0123456789JK</td>
+          <td class="py-3 px-4 border">Heartland</td>
+          <td class="py-3 px-4 border">Prowler 250BH</td>
+          <td class="py-3 px-4 border">Prime RV</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="flex justify-between items-center mt-6">
+    <span class="text-sm text-text-light/60 dark:text-text-dark/60">Showing 1 to 10 of 100 Caravans</span>
+    <div class="flex items-center gap-2">
+      <button class="px-3 py-1 border rounded-md text-sm hover:bg-primary/10">Previous</button>
+      <button class="px-3 py-1 border rounded-md text-sm hover:bg-primary/10">Next</button>
+    </div>
+  </div> -->
+
+  <div class="flex-1 flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-subtle-light dark:border-subtle-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-end h-16">
 <div class="flex items-center gap-4">
-<button class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-<svg class="h-6 w-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-gray-800"></span>
+<button class="p-2 rounded-full hover:bg-subtle-light dark:hover:bg-subtle-dark transition-colors"  onclick="window.location.href='./notifications.html'">
+<span class="material-symbols-outlined text-muted-light dark:text-muted-dark">notifications</span>
 </button>
-<button class="bg-primary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-colors" onclick="window.location.href='./addcaravan.html'">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-<span>Add Caravan</span>
-</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB58QuxmO9I87MT6KO9JzyJyOzGykKB8HNs8KK60Q8tLKn6eElRMh4xCg_7HLtolWjGHIaYsTZ7sRXnYNvrerXsZ3he5WwCljdHJ96L8CroLW1vRmszIxSh2lIb_oukdeY74ogaWXqf9cZb28-KpdLmzXNYA-GPHq0clI3_cX97aawi8C5VGbxPVQdQm_-kTdfxJYrllz33LEQv-sJadiKm_Gw1rXovQzsoHb_CLg3WVdA7PP1wcT5qAPJHqMLbkVZHYLtgILDaEVs");'></div>
 </div>
 </div>
+</div>
+</header>
 
-<!-- <div class="overflow-x-auto">
-<table class="w-full text-left">
-<thead>
-<tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
-<th class="py-3 px-4 font-semibold">VIN</th>
-<th class="py-3 px-4 font-semibold">Make</th>
-<th class="py-3 px-4 font-semibold">Model</th>
-<th class="py-3 px-4 font-semibold">Associated Dealer</th>
-<th class="py-3 px-4 font-semibold">Status</th>
-<th class="py-3 px-4 font-semibold text-right">Actions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="border-b border-border-light dark:border-border-dark"  onclick="window.location.href='./viewcaravan.html'">
-<td class="py-3 px-4 font-medium">1G9NF1234567890AB</td>
-<td class="py-3 px-4">Jayco</td>
-<td class="py-3 px-4">Eagle HT 284BHOK</td>
-<td class="py-3 px-4">Riverside RV</td>
-<td class="py-3 px-4"><span class="bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-sm font-medium">Approved</span></td>
-<td class="py-3 px-4 text-right">
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 20h9"></path>
-<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-</svg>
-</button>
-</td>
-</tr>
-<tr class="border-b border-border-light dark:border-border-dark">
-<td class="py-3 px-4 font-medium">2G8MF2345678901BC</td>
-<td class="py-3 px-4">Forest River</td>
-<td class="py-3 px-4">Cherokee Grey Wolf</td>
-<td class="py-3 px-4">Main St Motors</td>
-<td class="py-3 px-4"><span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm font-medium">Pending Review</span></td>
-<td class="py-3 px-4 text-right">
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 20h9"></path>
-<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-</svg>
-</button>
-</td>
-</tr>
-<tr class="border-b border-border-light dark:border-border-dark">
-<td class="py-3 px-4 font-medium">3H7NG3456789012CD</td>
-<td class="py-3 px-4">Grand Design</td>
-<td class="py-3 px-4">Reflection 312BHTS</td>
-<td class="py-3 px-4">Sunset Trailers</td>
-<td class="py-3 px-4"><span class="bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-sm font-medium">Approved</span></td>
-<td class="py-3 px-4 text-right">
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 20h9"></path>
-<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-</svg>
-</button>
-</td>
-</tr>
-<tr class="border-b border-border-light dark:border-border-dark">
-<td class="py-3 px-4 font-medium">4J6OH4567890123DE</td>
-<td class="py-3 px-4">Keystone</td>
-<td class="py-3 px-4">Passport 221BH</td>
-<td class="py-3 px-4">Grove Auto</td>
-<td class="py-3 px-4"><span class="bg-red-500/20 text-red-500 px-3 py-1 rounded-full text-sm font-medium">Rejected</span></td>
-<td class="py-3 px-4 text-right">
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 20h9"></path>
-<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-</svg>
-</button>
-</td>
-</tr>
-<tr class="border-b border-border-light dark:border-border-dark">
-<td class="py-3 px-4 font-medium">5K5PI5678901234EF</td>
-<td class="py-3 px-4">Coachmen</td>
-<td class="py-3 px-4">Apex Nano 194BHS</td>
-<td class="py-3 px-4">Crestview RV</td>
-<td class="py-3 px-4"><span class="bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-sm font-medium">Approved</span></td>
-<td class="py-3 px-4 text-right">
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-<button class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 20h9"></path>
-<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-</svg>
-</button>
-</td>
-</tr>
+  <main class="flex-1 p-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-2xl font-bold text-gray-900">Caravans</h1>
+    <p class="mt-2 text-gray-600">
+      Caravans available with their VIN, Make, Model, and associated Dealer.
+    </p>
+
+    <div class="mt-6 overflow-hidden rounded-xl bg-white shadow-sm">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">VIN</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Make</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Model</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Associated Dealer</th>
+          </tr>
+        </thead>
+<tbody class="divide-y divide-subtle-light dark:divide-subtle-dark text-sm">
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">1G9NF1234567890AB</td>
+    <td class="px-6 py-4 text-gray-600">Jayco</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Eagle HT 284BHOK</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Franklin Caravan</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">2G8MF2345678901BC</td>
+    <td class="px-6 py-4 text-gray-600">Forest River</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Cherokee Grey Wolf</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Riverside RV</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">3H7NG3456789012CD</td>
+    <td class="px-6 py-4 text-gray-600">Grand Design</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Reflection 312BHTS</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Sunset Trailers</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">4J6OH4567890123DE</td>
+    <td class="px-6 py-4 text-gray-600">Keystone</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Passport 221BH</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Grove Auto</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">5K5PI5678901234EF</td>
+    <td class="px-6 py-4 text-gray-600">Coachmen</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Apex Nano 194BHS</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Crestview RV</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">6L7QJ6789012345FG</td>
+    <td class="px-6 py-4 text-gray-600">Winnebago</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Micro Minnie 2108DS</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Adventure RV</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">7M8RK7890123456GH</td>
+    <td class="px-6 py-4 text-gray-600">Airstream</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Flying Cloud 25FB</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Luxury Trailers</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">8N9SL8901234567HI</td>
+    <td class="px-6 py-4 text-gray-600">Thor</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Quantum WS31</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Freedom RV</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">9P0TM9012345678IJ</td>
+    <td class="px-6 py-4 text-gray-600">Dutchmen</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Kodiak Ultra-Lite</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Highland RV</td>
+  </tr>
+
+  <tr class="cursor-pointer">
+    <td class="px-6 py-4 font-medium text-gray-900">0Q1UN0123456789JK</td>
+    <td class="px-6 py-4 text-gray-600">Heartland</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Prowler 250BH</td>
+    <td class="px-6 py-4 text-text-light dark:text-text-dark cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='./eachdealer.html'">Prime RV</td>
+  </tr>
 </tbody>
-</table>
-</div> -->
 
-<div class="overflow-x-auto">
-  <table class="w-full text-left border-collapse border border-transparent">
-    <thead>
-      <tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
-        <th class="py-3 px-4 font-semibold border border-border-light dark:border-border-dark">VIN</th>
-        <th class="py-3 px-4 font-semibold border border-border-light dark:border-border-dark">Make</th>
-        <th class="py-3 px-4 font-semibold border border-border-light dark:border-border-dark">Model</th>
-        <th class="py-3 px-4 font-semibold border border-border-light dark:border-border-dark">Associated Dealer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 cursor-pointer group" onclick="window.location.href='./viewcaravan.html'">
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark font-medium">1G9NF1234567890AB</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Jayco</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Eagle HT 284BHOK</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Riverside RV</td>
-      </tr>
-      <tr class="border-b border-border-light dark:border-border-dark">
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark font-medium">2G8MF2345678901BC</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Forest River</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Cherokee Grey Wolf</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Main St Motors</td>
-      </tr>
-      <tr class="border-b border-border-light dark:border-border-dark">
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark font-medium">3H7NG3456789012CD</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Grand Design</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Reflection 312BHTS</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Sunset Trailers</td>
-      </tr>
-      <tr class="border-b border-border-light dark:border-border-dark">
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark font-medium">4J6OH4567890123DE</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Keystone</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Passport 221BH</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Grove Auto</td>
-      </tr>
-      <tr class="border-b border-border-light dark:border-border-dark">
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark font-medium">5K5PI5678901234EF</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Coachmen</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Apex Nano 194BHS</td>
-        <td class="py-3 px-4 border border-border-light dark:border-border-dark">Crestview RV</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      </table>
+
+      <!-- Pagination -->
+      <div class="flex items-center justify-between px-6 py-4 bg-gray-50 text-sm text-gray-600">
+        <p>Showing 1 to 10 of 200 Caravans</p>
+        <div class="flex gap-2">
+          <button class="px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-100">Previous</button>
+          <button class="px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-100">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
 
-
-
-<div class="flex justify-between items-center mt-6">
-<span class="text-sm text-text-light/60 dark:text-text-dark/60">Showing 1 to 5 of 100 Caravans</span>
-<div class="flex items-center gap-2">
-<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Previous</button>
-<button class="px-3 py-1 border border-border-light dark:border-border-dark rounded-md text-sm hover:bg-primary/10">Next</button>
-</div>
-</div>
-</div>
-</div>
 </main>
 </div>
-
-</body></html>
+</div>
+</body>
+</html>

@@ -37,6 +37,15 @@
         }
     </script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+  [onclick] {
+    cursor: pointer; /* pointer cursor */
+    transition: color 0.3s ease-in-out; /* smooth color change */
+  }
+  [onclick]:hover {
+    color: #4fe232; /* your Tailwind primary green */
+  }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex min-h-screen">
@@ -67,6 +76,19 @@
 </svg>
 <span>Dealers</span>
 </a>
+
+
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./caravan.html">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.28 13.06a4.47 4.47 0 0 0-2.8-3.9A4.47 4.47 0 0 0 12.6 4H9.5a4.5 4.5 0 0 0 0 9h3.1a4.47 4.47 0 0 1 4.47 4.47.5.5 0 0 1-.5.5H8"></path>
+<path d="M6 18h-.5a4.5 4.5 0 0 1 0-9H8"></path>
+<path d="M11 6V5a4 4 0 0 1 4-4h2"></path>
+<path d="M18 19v1a4 4 0 0 1-4 4h-2"></path>
+</svg>
+<span>Caravans</span>
+</a>
+
+
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./leadslist.html">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -83,7 +105,7 @@
 </svg>
 <span onclick="window.location.href='./reports.html'">Reports</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
 <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
 </svg>
@@ -171,19 +193,19 @@
 <div class="mt-6 border-t border-subtle-light dark:border-subtle-dark pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
 <div>
 <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Leads</p>
-<p class="text-2xl font-bold mt-1">120</p>
+<p class="text-2xl font-bold mt-1"  onclick="window.location.href='./dealerslist.html'">120</p>
 </div>
 <div>
 <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Caravans</p>
-<p class="text-2xl font-bold mt-1">50</p>
+<p class="text-2xl font-bold mt-1"  onclick="window.location.href='./caravan.html'">50</p>
 </div>
 <div>
 <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Reports</p>
-<p class="text-2xl font-bold mt-1">20</p>
+<p class="text-2xl font-bold mt-1"  onclick="window.location.href='./reports.html'">20</p>
 </div>
 <div>
 <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Billing</p>
-<p class="text-2xl font-bold text-green-500 mt-1">Paid</p>
+<p class="text-2xl font-bold text-green-500 mt-1"  onclick="window.location.href='./revenue.html'">Paid</p>
 </div>
 </div>
 </div>
@@ -203,8 +225,8 @@
 </thead>
 <tbody class="divide-y divide-subtle-light dark:divide-subtle-dark">
 <tr>
-<td class="px-6 py-4 whitespace-nowrap">John Doe</td>
-<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-15</td>
+<td class="px-6 py-4 whitespace-nowrap"  onclick="window.location.href='./leads.html'">John Doe</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">03-10-2025</td>
 <td class="px-6 py-4 whitespace-nowrap">
 <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium">New</span>
 </td>
@@ -213,8 +235,8 @@
 </td>
 </tr>
 <tr>
-<td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-14</td>
+<td class="px-6 py-4 whitespace-nowrap" onclick="window.location.href='./leads.html'">Jane Smith</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">29-09-2025</td>
 <td class="px-6 py-4 whitespace-nowrap">
 <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200 px-2 py-1 rounded-full text-xs font-medium">Contacted</span>
 </td>
@@ -223,8 +245,8 @@
 </td>
 </tr>
 <tr>
-<td class="px-6 py-4 whitespace-nowrap">Sam Wilson</td>
-<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">2024-03-12</td>
+<td class="px-6 py-4 whitespace-nowrap" onclick="window.location.href='./leads.html'">Sam Wilson</td>
+<td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">27-09-2025</td>
 <td class="px-6 py-4 whitespace-nowrap">
 <span class="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 px-2 py-1 rounded-full text-xs font-medium">Closed</span>
 </td>
@@ -236,38 +258,38 @@
 </table>
 </div>
 <div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
-<a class="text-primary font-semibold hover:underline" href="#">View All Leads</a>
+<a class="text-primary font-semibold hover:underline" href="./leadslist.html">View All Leads</a>
 </div>
 </div>
-<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl">
+<div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl" >
 <div class="p-6">
 <h3 class="text-xl font-bold">Generated Reports</h3>
 </div>
 <ul class="divide-y divide-subtle-light dark:divide-subtle-dark">
-<li class="px-6 py-4 flex items-center justify-between">
+<li class="px-6 py-4 flex items-center justify-between"  onclick="window.location.href='./reports.html'">
 <div>
 <p class="font-medium">Monthly Sales Report - Feb 2024</p>
-<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-03-01</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 29-09-2025</p>
 </div>
 <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
 </li>
-<li class="px-6 py-4 flex items-center justify-between">
+<li class="px-6 py-4 flex items-center justify-between"  onclick="window.location.href='./reports.html'">
 <div>
 <p class="font-medium">Quarterly Lead Analysis - Q4 2023</p>
-<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-01-05</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 27-09-2025</p>
 </div>
 <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
 </li>
-<li class="px-6 py-4 flex items-center justify-between">
+<li class="px-6 py-4 flex items-center justify-between" onclick="window.location.href='./reports.html'">
 <div>
 <p class="font-medium">Yearly Performance Review - 2023</p>
-<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 2024-01-10</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 24-09-2025</p>
 </div>
 <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
 </li>
 </ul>
 <div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
-<a class="text-primary font-semibold hover:underline" href="#">View All Reports</a>
+<a class="text-primary font-semibold hover:underline" href="./reports.html">View All Reports</a>
 </div>
 </div>
 </div>
