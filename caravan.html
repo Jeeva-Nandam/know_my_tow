@@ -54,12 +54,8 @@
 <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
 <div>
 <div class="flex items-center gap-3 mb-10">
-<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-<line x1="12" x2="12" y1="22.08" y2="12"></line>
-</svg>
-<img src="./assets/know_my_tow.png" class="p-2"/>
+
+<img src="./assets/colakin_logo.jpeg" class="p-2" />
 </div>
 <nav class="flex flex-col gap-2">
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
@@ -87,7 +83,7 @@
 <path d="M11 6V5a4 4 0 0 1 4-4h2"></path>
 <path d="M18 19v1a4 4 0 0 1-4 4h-2"></path>
 </svg>
-<span>Caravans</span>
+<span>Cars</span>
 </a>
 
 
@@ -105,7 +101,7 @@
 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
 <polyline points="14 2 14 8 20 8"></polyline>
 </svg>
-<span onclick="window.location.href='./reports.html'">Reports</span>
+<span onclick="window.location.href='./reports.html'">Applicants</span>
 </a>
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
 <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -250,19 +246,20 @@
 
   <main class="flex-1 p-6 bg-gray-50">
   <div class="max-w-7xl mx-auto">
-    <h1 class="text-2xl font-bold text-gray-900">Caravans</h1>
+    <h1 class="text-2xl font-bold text-gray-900">Cars</h1>
     <p class="mt-2 text-gray-600">
-      Caravans available with their VIN, Make, Model, and associated Dealer.
+      Cars details with their Name, Version, Model, Price and dat of Launch.
     </p>
 
     <div class="mt-6 overflow-hidden rounded-xl bg-white shadow-sm">
-      <table class="min-w-full divide-y divide-gray-200">
+      <!-- <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
-            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">VIN</th>
-            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Make</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Car Name</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Version</th>
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Model</th>
-            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Associated Dealer</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Price</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Date of Launch</th>
           </tr>
         </thead>
 <tbody class="divide-y divide-subtle-light dark:divide-subtle-dark text-sm">
@@ -337,11 +334,106 @@
   </tr>
 </tbody>
 
-      </table>
+      </table> -->
+
+      <table class="min-w-full divide-y divide-gray-200">
+  <thead class="bg-gray-50">
+    <tr>
+      <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Car Name</th>
+      <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Version</th>
+      <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Model</th>
+      <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Price</th>
+      <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Date of Launch</th>
+    </tr>
+  </thead>
+
+  <tbody class="divide-y divide-subtle-light dark:divide-subtle-dark text-sm">
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Maruti Suzuki</td>
+      <td class="px-6 py-4 text-gray-600">ZXi Plus</td>
+      <td class="px-6 py-4 text-gray-600">Baleno</td>
+      <td class="px-6 py-4 text-gray-600">₹9.80 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Feb 2022</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors" onclick="window.location.href='./viewcaravan.html'">Hyundai</td>
+      <td class="px-6 py-4 text-gray-600">SX (O) Turbo</td>
+      <td class="px-6 py-4 text-gray-600">Venue</td>
+      <td class="px-6 py-4 text-gray-600">₹12.50 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Jul 2022</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Tata Motors</td>
+      <td class="px-6 py-4 text-gray-600">XZ+ EV</td>
+      <td class="px-6 py-4 text-gray-600">Nexon EV</td>
+      <td class="px-6 py-4 text-gray-600">₹16.19 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Jan 2023</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Mahindra</td>
+      <td class="px-6 py-4 text-gray-600">AX7 L Diesel AT</td>
+      <td class="px-6 py-4 text-gray-600">XUV700</td>
+      <td class="px-6 py-4 text-gray-600">₹24.95 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Aug 2021</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Kia</td>
+      <td class="px-6 py-4 text-gray-600">GT Line DCT</td>
+      <td class="px-6 py-4 text-gray-600">Seltos</td>
+      <td class="px-6 py-4 text-gray-600">₹17.49 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Jul 2023</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Toyota</td>
+      <td class="px-6 py-4 text-gray-600">Hybrid VX</td>
+      <td class="px-6 py-4 text-gray-600">Hyryder</td>
+      <td class="px-6 py-4 text-gray-600">₹19.74 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Oct 2022</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Honda</td>
+      <td class="px-6 py-4 text-gray-600">ZX CVT</td>
+      <td class="px-6 py-4 text-gray-600">City</td>
+      <td class="px-6 py-4 text-gray-600">₹15.52 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Mar 2023</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Skoda</td>
+      <td class="px-6 py-4 text-gray-600">Style 1.5 TSI</td>
+      <td class="px-6 py-4 text-gray-600">Slavia</td>
+      <td class="px-6 py-4 text-gray-600">₹17.72 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Feb 2022</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">MG Motors</td>
+      <td class="px-6 py-4 text-gray-600">Sharp Pro</td>
+      <td class="px-6 py-4 text-gray-600">Hector</td>
+      <td class="px-6 py-4 text-gray-600">₹20.99 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Jan 2024</td>
+    </tr>
+
+    <tr class="cursor-pointer">
+      <td class="px-6 py-4 text-text-light dark:text-text-dark hover:text-primary transition-colors">Volkswagen</td>
+      <td class="px-6 py-4 text-gray-600">GT Plus DSG</td>
+      <td class="px-6 py-4 text-gray-600">Virtus</td>
+      <td class="px-6 py-4 text-gray-600">₹18.42 Lakh</td>
+      <td class="px-6 py-4 text-gray-600">Jun 2023</td>
+    </tr>
+  </tbody>
+</table>
+
 
       <!-- Pagination -->
       <div class="flex items-center justify-between px-6 py-4 bg-gray-50 text-sm text-gray-600">
-        <p>Showing 1 to 10 of 200 Caravans</p>
+        <p>Showing 1 to 10 of 200 Cars</p>
         <div class="flex gap-2">
           <button class="px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-100">Previous</button>
           <button class="px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-100">Next</button>

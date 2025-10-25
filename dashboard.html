@@ -48,15 +48,12 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex min-h-screen w-full">
+
 <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
 <div>
 <div class="flex items-center gap-3 mb-10">
-<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-<line x1="12" x2="12" y1="22.08" y2="12"></line>
-</svg>
-<img src="./assets/know_my_tow.png" class="p-2"/>
+
+<img src="./assets/colakin_logo.jpeg" class="p-2" />
 </div>
 <nav class="flex flex-col gap-2">
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
@@ -84,7 +81,7 @@
 <path d="M11 6V5a4 4 0 0 1 4-4h2"></path>
 <path d="M18 19v1a4 4 0 0 1-4 4h-2"></path>
 </svg>
-<span>Caravans</span>
+<span>Cars</span>
 </a>
 
 
@@ -102,7 +99,7 @@
 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
 <polyline points="14 2 14 8 20 8"></polyline>
 </svg>
-<span onclick="window.location.href='./reports.html'">Reports</span>
+<span onclick="window.location.href='./reports.html'">Applicants</span>
 </a>
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
 <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +152,7 @@
 <p class="text-4xl font-bold text-white">350</p>
 </div>
 <div class="bg-accent-green p-6 rounded-xl border border-transparent flex flex-col gap-2">
-<p class="text-base font-semibold text-white/80">Reports</p>
+<p class="text-base font-semibold text-white/80">Loan Applicant</p>
 <p class="text-4xl font-bold text-white">800</p>
 </div>
 </div>
@@ -167,87 +164,98 @@
 <h3 class="text-xl font-bold mb-4">Recent Dealer Activity</h3>
 <div class="overflow-x-auto">
 <table class="w-full text-left">
-<thead>
-<tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
-<th class="py-3 px-4 font-semibold">Dealer</th>
-<th class="py-3 px-4 font-semibold">Activity</th>
-<th class="py-3 px-4 font-semibold">Caravans</th>
-<th class="py-3 px-4 font-semibold">Date</th>
-</tr>
-</thead>
-<tbody>
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Franklin Caravan</td>
-    <td class="py-3 px-4">Added new vehicle</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Jayco Eagle</td>
-    <td class="py-3 px-4">03-10-2025</td>
-  </tr>
+  <thead>
+    <tr class="text-text-light/60 dark:text-text-dark/60 border-b border-border-light dark:border-border-dark">
+      <th class="py-3 px-4 font-semibold">Dealer</th>
+      <th class="py-3 px-4 font-semibold">Car Name</th>
+      <th class="py-3 px-4 font-semibold">Applicant Name</th>
+      <th class="py-3 px-4 font-semibold">Ammount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Existing Rows -->
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./eachdealer.html'">Bright Motors</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Hyundai Creta SX</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Ramesh Kumar</td>
+      <td class="py-3 px-4">₹3,50,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Global Motors</td>
-    <td class="py-3 px-4">Billing update</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Ford Transit</td>
-    <td class="py-3 px-4">01-10-2025</td>
-  </tr>
+    <!-- ... Existing rows ... -->
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Precision Auto</td>
-    <td class="py-3 px-4">Routine maintenance</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Volkswagen Crafter</td>
-    <td class="py-3 px-4">29-09-2025</td>
-  </tr>
+    <!-- New Indian Rows -->
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./eachdealer.html'">Vishnu Cars</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Honda City</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Manoj Sharma</td>
+      <td class="py-3 px-4">₹2,50,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Apex Auto</td>
-    <td class="py-3 px-4">Inspection completed</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Mercedes Sprinter</td>
-    <td class="py-3 px-4">27-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Kaveri Motors</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Tata Nexon</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Priya Singh</td>
+      <td class="py-3 px-4">₹3,40,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Summit Motors</td>
-    <td class="py-3 px-4">Added new accessory</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Hymer B-Class</td>
-    <td class="py-3 px-4">24-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Sai Auto World</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Maruti Swift</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Arun Mehta</td>
+      <td class="py-3 px-4">₹1,95,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Elite Auto</td>
-    <td class="py-3 px-4">Software update</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Knaus Van TI</td>
-    <td class="py-3 px-4">20-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Skyline Motors</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Mahindra SUV700</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Sneha Iyer</td>
+      <td class="py-3 px-4">₹4,85,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Metro Cars</td>
-    <td class="py-3 px-4">New registration</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Adria Twin</td>
-    <td class="py-3 px-4">19-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Lakshmi Automobiles</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Honda City</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Manoj Verma</td>
+      <td class="py-3 px-4">₹3,20,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Velocity Auto</td>
-    <td class="py-3 px-4">Maintenance scheduled</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Sunlight T67</td>
-    <td class="py-3 px-4">13-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Bright Motors</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Toyota Innova</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Neha Gupta</td>
+      <td class="py-3 px-4">₹5,75,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">AutoNation</td>
-    <td class="py-3 px-4">Issue resolved</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Chausson Flash</td>
-    <td class="py-3 px-4">11-09-2025</td>
-  </tr>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Starline Auto</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Kia Seltos</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Vikram Das</td>
+      <td class="py-3 px-4">₹4,10,000</td>
+    </tr>
 
-  <tr class="border-b border-border-light dark:border-border-dark">
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./eachdealer.html'">Prime Auto</td>
-    <td class="py-3 px-4">Accessory installed</td>
-    <td class="py-3 px-4 hover:text-green-500 cursor-pointer transition-colors duration-300 ease-in-out" onclick="window.location.href='./viewcaravan.html'">Pilote Van</td>
-    <td class="py-3 px-4">09-09-2025</td>
-  </tr>
-</tbody>
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Heritage Cars</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">MG Hector</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Anjali Nair</td>
+      <td class="py-3 px-4">₹4,60,000</td>
+    </tr>
 
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Galaxy Motors</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Skoda Slavia</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Rohit Sharma</td>
+      <td class="py-3 px-4">₹3,75,000</td>
+    </tr>
+
+    <tr class="border-b border-border-light dark:border-border-dark">
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer">Elite Wheels</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./viewcaravan.html'">Renault Kiger</td>
+      <td class="py-3 px-4 hover:text-green-500 cursor-pointer" onclick="window.location.href='./leads.html'">Divya Menon</td>
+      <td class="py-3 px-4">₹2,80,000</td>
+    </tr>
+  </tbody>
 </table>
+
 </div>
 <div class="flex justify-between items-center mt-2 p-2">
 <span class="text-sm text-text-light/60 dark:text-text-dark/60">Showing 1 to 10 of 800 </span>

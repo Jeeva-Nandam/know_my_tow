@@ -52,12 +52,8 @@
 <aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark p-6 flex flex-col justify-between">
 <div>
 <div class="flex items-center gap-3 mb-10">
-<svg class="text-primary" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-<line x1="12" x2="12" y1="22.08" y2="12"></line>
-</svg>
-<img src="./assets/know_my_tow.png" class="p-2"/>
+
+<img src="./assets/colakin_logo.jpeg" class="p-2" />
 </div>
 <nav class="flex flex-col gap-2">
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./dashboard.html">
@@ -85,7 +81,7 @@
 <path d="M11 6V5a4 4 0 0 1 4-4h2"></path>
 <path d="M18 19v1a4 4 0 0 1-4 4h-2"></path>
 </svg>
-<span>Caravans</span>
+<span>Cars</span>
 </a>
 
 
@@ -103,7 +99,7 @@
 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
 <polyline points="14 2 14 8 20 8"></polyline>
 </svg>
-<span onclick="window.location.href='./reports.html'">Reports</span>
+<span onclick="window.location.href='./reports.html'">Applicants</span>
 </a>
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-text-light dark:text-text-dark font-medium" href="./revenue.html">
 <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +163,9 @@
 </div>
 </div>
 </header>
-<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+
+<!-- <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <div class="lg:col-span-2 space-y-8">
 <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
@@ -361,7 +359,209 @@
 </div>
 </div>
 </div>
+</main> -->
+
+
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight">Bright Motors</h2>
+            <p class="text-muted-light dark:text-muted-dark mt-1">45 MG Road, Mumbai, Maharashtra 400001</p>
+            <div class="mt-4 flex items-center gap-4">
+              <span class="inline-flex items-center gap-2 text-sm bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-3 py-1 rounded-full font-medium">
+                <span class="size-2 bg-green-500 rounded-full"></span>
+                Active
+              </span>
+              <span class="text-sm text-muted-light dark:text-muted-dark">Member since: 15-01-2022</span>
+            </div>
+          </div>
+          <div class="mt-4 sm:mt-0 flex-shrink-0">
+            <button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity" onclick="window.location.href='./dealerprofilepage.html'">
+              <span class="material-symbols-outlined">edit</span>
+              Edit Dealer
+            </button>
+          </div>
+        </div>
+        <div class="mt-6 border-t border-subtle-light dark:border-subtle-dark pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Leads</p>
+            <p class="text-2xl font-bold mt-1" onclick="window.location.href='./dealerslist.html'">85</p>
+          </div>
+          <div>
+            <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Cars</p>
+            <p class="text-2xl font-bold mt-1" onclick="window.location.href='./caravan.html'">40</p>
+          </div>
+          <div>
+            <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Reports</p>
+            <p class="text-2xl font-bold mt-1" onclick="window.location.href='./reports.html'">15</p>
+          </div>
+          <div>
+            <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider font-semibold">Billing</p>
+            <p class="text-2xl font-bold text-green-500 mt-1" onclick="window.location.href='./revenue.html'">Paid</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl">
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Recent Leads</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-subtle-light/30 dark:bg-subtle-dark/30">
+              <tr>
+                <th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Customer Name</th>
+                <th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Date</th>
+                <th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider">Status</th>
+                <th class="px-6 py-3 text-left font-semibold text-muted-light dark:text-muted-dark uppercase tracking-wider"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-subtle-light dark:divide-subtle-dark">
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap" onclick="window.location.href='./leads.html'">Rajesh Kumar</td>
+                <td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">03-10-2025</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium">New</span>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-right">
+                  <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap" onclick="window.location.href='./leads.html'">Ananya Sharma</td>
+                <td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">29-09-2025</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200 px-2 py-1 rounded-full text-xs font-medium">Contacted</span>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-right">
+                  <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap" onclick="window.location.href='./leads.html'">Vikram Singh</td>
+                <td class="px-6 py-4 whitespace-nowrap text-muted-light dark:text-muted-dark">27-09-2025</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span class="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 px-2 py-1 rounded-full text-xs font-medium">Closed</span>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-right">
+                  <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
+          <a class="text-primary font-semibold hover:underline" href="./leadslist.html">View All Leads</a>
+        </div>
+      </div>
+
+      <!-- <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl">
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Generated Reports</h3>
+        </div>
+        <ul class="divide-y divide-subtle-light dark:divide-subtle-dark">
+          <li class="px-6 py-4 flex items-center justify-between" onclick="window.location.href='./reports.html'">
+            <div>
+              <p class="font-medium">Monthly Sales Report - Feb 2025</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 29-09-2025</p>
+            </div>
+            <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+          </li>
+          <li class="px-6 py-4 flex items-center justify-between" onclick="window.location.href='./reports.html'">
+            <div>
+              <p class="font-medium">Quarterly Lead Analysis - Q4 2024</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 27-09-2025</p>
+            </div>
+            <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+          </li>
+          <li class="px-6 py-4 flex items-center justify-between" onclick="window.location.href='./reports.html'">
+            <div>
+              <p class="font-medium">Yearly Performance Review - 2024</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Generated on: 24-09-2025</p>
+            </div>
+            <button class="text-muted-light dark:text-muted-dark hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+          </li>
+        </ul>
+        <div class="p-6 border-t border-subtle-light dark:border-subtle-dark">
+          <a class="text-primary font-semibold hover:underline" href="./reports.html">View All Reports</a>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="space-y-8">
+      <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+        <div class="space-y-4 text-sm">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">person</span>
+            <div>
+              <p class="font-medium">Ramesh Gupta</p>
+              <p class="text-muted-light dark:text-muted-dark">Primary Contact</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">mail</span>
+            <div>
+              <p class="font-medium">ramesh.gupta@mumbaiautohub.in</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-muted-light dark:text-muted-dark mt-0.5">phone</span>
+            <div>
+              <p class="font-medium">+91 98765 43210</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-background-light dark:bg-background-dark border border-subtle-light dark:border-subtle-dark rounded-xl p-6">
+        <h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4">
+            <div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">person_add</span>
+            </div>
+            <div>
+              <p class="text-sm">New lead <span class="font-semibold text-text-light dark:text-text-dark">Sanya Kapoor</span> was assigned.</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">2 hours ago</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">directions_car</span>
+            </div>
+            <div>
+              <p class="text-sm">Added a new car: <span class="font-semibold text-text-light dark:text-text-dark">Maruti Suzuki Swift VXI</span>.</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">1 day ago</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">assessment</span>
+            </div>
+            <div>
+              <p class="text-sm">Generated monthly sales report.</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">3 days ago</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="bg-subtle-light dark:bg-subtle-dark rounded-full size-8 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="material-symbols-outlined text-muted-light dark:text-muted-dark text-base">payments</span>
+            </div>
+            <div>
+              <p class="text-sm">Subscription payment was successful.</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">01-03-2025</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </main>
+
 </div>
 </div>
 
